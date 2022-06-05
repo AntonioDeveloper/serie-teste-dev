@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Redinha",
+      "price": 99.99,
+      "image": "https://i.postimg.cc/vm8p0Nj4/rede.png",
+      "flag": ""
+    },
+    {
+      "id": 2,
+      "name": "Caminha",
+      "price": 30.99,
+      "image": "https://i.postimg.cc/N0NZSxqp/caminha.png",
+      "flag": "50% off"
+    },
+    {
+      "id": 3,
+      "name": "Girafinha",
+      "price": 200.99,
+      "image": "https://i.postimg.cc/K8D6r29X/girafinha.png",
+      "flag": ""
+    },
+    {
+      "id": 4,
+      "name": "Banheirinha",
+      "price": 132.99,
+      "image": "https://i.postimg.cc/y8KqZdyX/banheira.png",
+      "flag": "novo"
+    }
+  ]
+}
