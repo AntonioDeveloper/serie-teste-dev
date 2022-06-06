@@ -1,9 +1,38 @@
+import { useState, useEffect } from 'react';
 import { Container } from './styles';
 import imgLogoPet from '../../assets/logo.png';
 import imgLogoSerie from '../../assets/serie-logo.png';
 import imgCards from '../../assets/cards.png';
+import imgArrow from '../../assets/roll-up-arrow.png';
+import imgWa from '../../assets/whatsapp.png';
 
 export function Footer() {
+
+  const [visible, setVisible] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    console.log(scrollPosition);
+    setScrollPosition(window.scrollY);
+
+    const heightLimit = window.screen.height * 0.8;
+    console.log(heightLimit);
+
+    if (scrollPosition > heightLimit) {
+      setVisible(true);
+    } else if (scrollPosition < window.screen.height * 0.1) {
+      setVisible(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollPosition]);
+
   return (
     <Container>
       <div className="columns">
@@ -59,6 +88,14 @@ export function Footer() {
         <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjoqKSxiZn4AhUMPJEKHcmSC58YABABGgJjZQ&ae=2&ohost=www.google.com&cid=CAESbOD2I-nT8LOMse40TgM49IGcJx4U2kcoEesnwVlc_BYpU8li-6W-cnmNHilFadhDAWWWnKMKCn_aorXy47QBPqGho3EXqvGJQwLuXY1DK-DIQF-Ulwz9LyZ2RXUcZ62PWNalY-ndMQqg1VVahQ&sig=AOD64_2tucd2wsmLt0ZraGjlvd641ht6uA&q&adurl&ved=2ahUKEwirgp6xiZn4AhUOAbkGHYqRDOMQ0Qx6BAgDEAE" target="_blank">
           <img src={imgLogoSerie} alt="Serie" />
         </a>
+      </div>
+      <div className={`rollup ${visible ? "" : "hidden"}`}>
+        <a href="#top" >
+          <img src={imgArrow} alt="Ir para o topo" />
+        </a>
+      </div>
+      <div className="whatsapp">
+        <img src={imgWa} alt="Whatsapp" />
       </div>
     </Container>
   )

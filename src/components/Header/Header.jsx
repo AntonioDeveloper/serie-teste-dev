@@ -6,7 +6,7 @@ import { Container } from './styles';
 
 export function Header() {
   return (
-    <Container>
+    <Container id="top">
       <div className="searchbox">
         <input type="text" name="searchbar" id="searchbar" placeholder="Pesquisa..." />
         <button type="submit" >

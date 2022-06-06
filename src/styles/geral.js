@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
   }
 
 `;

@@ -122,4 +122,30 @@ export const Container = styled.footer`
         font-size: 12px;
       }
     }
+
+    .rollup,
+    .whatsapp {
+      width: 51px;
+      height: 51px;
+    }
+
+    .rollup {
+      position: fixed;
+      display: none;
+      z-index: 1;
+      bottom: 20%;
+      right: 10%;
+      display: block;
+    }
+
+    .whatsapp {
+      position: fixed;
+      z-index: 1;
+      bottom: 10%;
+      right: 10%;
+    }
+
+    .hidden {
+      display: none;
+    }
 `;
