@@ -7,6 +7,7 @@ import { NewProducts } from './components/NewProducts/NewProducts';
 import { GatosCaes } from './components/GatosCaes/GatosCaes';
 import { Destaques } from './components/Destaques/Destaques';
 import { News } from './components/News/News';
+import { Footer } from './components/Footer/Footer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { api } from './services/api';
@@ -31,6 +32,7 @@ export function App() {
       <GatosCaes />
       <Destaques products={products} />
       <News />
+      <Footer />
       <GlobalStyle />
     </main>
   );

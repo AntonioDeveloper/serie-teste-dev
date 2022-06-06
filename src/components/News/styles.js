@@ -32,5 +32,39 @@ export const Container = styled.section`
     padding: 30px 0;
 
     color: #fff;
+
+    p {
+      line-height: 50px;
+    }
+    
+    form {
+      display: flex;
+      margin-top: 50px;
+
+      input {
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+        margin-right: 20px; 
+
+        &::placeholder {
+          color: #fff;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        background: #FFA200;
+        color: #fff;
+        padding: 10px 20px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
 `;
