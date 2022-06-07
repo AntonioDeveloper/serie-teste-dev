@@ -17,6 +17,12 @@ export const GlobalStyle = createGlobalStyle`
   html {
     font-family: "Lato", sans-serif;
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 `;

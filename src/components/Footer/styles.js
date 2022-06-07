@@ -9,6 +9,11 @@ export const Container = styled.footer`
     justify-items: center;
     text-align: center;
 
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+
     .infos {
       img {
         width: 200px;
@@ -61,6 +66,10 @@ export const Container = styled.footer`
         font-size: 12px;
         line-height: 14px;
       }
+
+      @media screen and (max-width: 767px) {
+        order: 2
+      }
     }
 
     .institutional { 
@@ -68,14 +77,26 @@ export const Container = styled.footer`
         align-items: center;
         text-align: left;
 
+        @media screen and (max-width: 767px) {
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+
       .links {
         list-style-type: none;
 
         li {
+          @media screen and (max-width: 767px) {
+            text-align: center;
+          }
           a {
             text-decoration: none;
             color: #666;
             line-height: 25px;
+
+            @media screen and (max-width: 767px) {
+              line-height: 35px;
+            }
           }
         }
       }
@@ -86,10 +107,18 @@ export const Container = styled.footer`
       align-items: center;
       flex-direction: column;
       justify-content: center;
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+      }
       
       p {
         color: #666;
         line-height: 25px;
+
+        @media screen and (max-width: 767px) {
+          line-height: 35px;
+        }
       }
 
       a {
@@ -103,9 +132,17 @@ export const Container = styled.footer`
       flex-direction: column;
       justify-content: center;
 
+      @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+
       p{
         color: #666;
         line-height: 25px;
+
+        @media screen and (max-width: 767px) {
+          line-height: 35px;
+        }
       }
     }
   }
@@ -117,6 +154,10 @@ export const Container = styled.footer`
       align-items: center;
       justify-content: center;
 
+      @media screen and (max-width: 767px) {
+        margin-top: 20px;
+      }
+      
       span {
         margin-right: 30px;
         font-size: 12px;

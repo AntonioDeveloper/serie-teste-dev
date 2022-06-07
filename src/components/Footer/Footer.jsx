@@ -41,17 +41,17 @@ export function Footer() {
           <ul className="social">
             <li>
               <a href="#">
-                <i class="fi fi-brands-facebook"></i>
+                <i className="fi fi-brands-facebook"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fi fi-brands-instagram"></i>
+                <i className="fi fi-brands-instagram"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fi fi-brands-twitter"></i>
+                <i className="fi fi-brands-twitter"></i>
               </a>
             </li>
           </ul>

@@ -8,6 +8,11 @@ export const Container = styled.div`
   padding: 10px 0;
   position: relative;
   top: -3px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
   
   a {
     display: inline-block;

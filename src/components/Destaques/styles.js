@@ -7,6 +7,11 @@ export const Container = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 15px;
+    }
+
     .card {
     margin: 0 5px;
 
@@ -14,6 +19,9 @@ export const Container = styled.section`
       cursor: pointer;
       .overlay {
         display: block;
+        @media screen and (max-width: 768px) { 
+          display: none;
+        }
       }
     }
 
@@ -42,17 +50,36 @@ export const Container = styled.section`
       text-align: center;
       padding: 5px;
       position: absolute;
+
+      @media screen and (max-width: 768px) {
+        width: 15%;
+      }
     }
 
     img {
       width: 100%;
     }
 
-    p {
+    p{
+      text-align: center;
+      color: #666;
+      padding: 5px 0;
+    }
+
+    &:after {
+      @media screen and (max-width: 768px) {
+        content: "Comprar";
+        background: #FFA200;
+        color: #fff;
+        position: relative;
+        display: block;
         text-align: center;
-        color: #666;
+        width: 50%;
+        margin: 5px auto;
         padding: 5px 0;
+        
       }
+    }
     }
   }
 `;

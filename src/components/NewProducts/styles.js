@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  margin-bottom: 40px;
   h1 {
     text-align: center;
     padding: 10px 0;
@@ -10,6 +11,11 @@ export const Container = styled.div`
   .slick-slide {
     img {
       width: 100%;
+
+      @media screen and (max-width: 768px) {
+        width: auto;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -50,11 +56,33 @@ export const Container = styled.div`
       text-align: center;
       padding: 5px;
       position: absolute;
+
+      @media screen and (max-width: 768px) {
+        width: 2%;
+      }
     }
     p {
       text-align: center;
       color: #666;
       padding: 5px 0;
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    &:after {
+      @media screen and (max-width: 768px) {
+        content: "Comprar";
+        background: #FFA200;
+        color: #fff;
+        position: relative;
+        display: block;
+        text-align: center;
+        width: 30%;
+        margin: 0 auto;
+        padding: 10px 0;
+      }
     }
   }
 `;

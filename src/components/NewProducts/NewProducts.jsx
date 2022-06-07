@@ -21,7 +21,7 @@ export function NewProducts({ products }) {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 767,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -29,7 +29,7 @@ export function NewProducts({ products }) {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 520,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
