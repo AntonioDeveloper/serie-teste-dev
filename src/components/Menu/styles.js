@@ -42,6 +42,7 @@ export const Container = styled.nav`
     .nav-link {
       margin: 0 20px;
       width: 10%;
+      text-align: center;
 
       @media screen and (max-width: 768px) {
         flex: initial;
@@ -69,7 +70,7 @@ export const Container = styled.nav`
       a {
         color: #fff;
         text-decoration: none;
-
+        
         @media screen and (max-width: 768px) {
           padding-left: 10px;
         }
@@ -81,13 +82,52 @@ export const Container = styled.nav`
         top: 15px;
         background: #fff;
         display: none;
+        /* overflow-x: auto; */
+        width: 210px;
+
+        .second-level {
+          border-bottom: 1px solid #666;
+          max-height: 35px;
+
+          &:hover {
+              background: #ccc;
+              color: #fff;
+              width: 100%;
+
+              .dropdown-second {
+                display: block;
+              }
+            }
+
+          a {
+            color: #666;
+            line-height: 35px;
+          }
+        }
+      }
+
+      .dropdown-second {
+        position: relative;
+        left: 211px;
+        top: -35px;
+        background: #fff;
+        display: none;
         overflow-x: auto;
         width: 210px;
 
-        .dropdown-link {
+        .third-level {
+          border-bottom: 1px solid #666;
+          max-height: 35px;
+
+          &:hover {
+              background: #ccc;
+              color: #fff;
+              width: 100%;
+            }
+
           a {
             color: #666;
-            line-height: 25px;
+            line-height: 35px;
           }
         }
       }

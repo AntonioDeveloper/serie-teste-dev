@@ -34,16 +34,30 @@ export function Menu() {
         <li className="nav-link">
           <a href="#">Categoria <i class="fi fi-rr-caret-down"></i></a>
           <div className="dropdown">
-            <li className="dropdown-link">
+            <li className="second-level">
               <a href="#">Link 1</a>
             </li>
-            <li className="dropdown-link">
+            <li className="second-level">
               <a href="#">Link 2</a>
+              <div className="dropdown-second">
+                <li className="third-level">
+                  <a href="#">Link 1</a>
+                </li>
+                <li className="third-level">
+                  <a href="#">Link 2</a>
+                </li>
+                <li className="third-level">
+                  <a href="#">Link 3</a>
+                </li>
+                <li className="third-level">
+                  <a href="#">Link 4</a>
+                </li>
+              </div>
             </li>
-            <li className="dropdown-link">
+            <li className="second-level">
               <a href="#">Link 3</a>
             </li>
-            <li className="dropdown-link">
+            <li className="second-level">
               <a href="#">Link 4</a>
             </li>
           </div>
