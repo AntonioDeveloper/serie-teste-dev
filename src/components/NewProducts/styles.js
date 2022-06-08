@@ -33,7 +33,7 @@ export const Container = styled.div`
     margin: 0 5px;
     .overlay {
       display: none;
-      width: 250px;
+      width: 290px;
       height: 80%;
       background: rgba(129,88,197,.5);
       position: absolute;

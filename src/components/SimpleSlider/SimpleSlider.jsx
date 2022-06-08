@@ -1,9 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
-import banner1 from '../../assets/banner.png';
+import bannerDesk from '../../assets/banner.png';
+import bannerMob from '../../assets/banner-mobile.jpg';
+import bannerTab from '../../assets/banner-tablet.jpg';
 import { Container } from './styles';
 
 export function SimpleSlider() {
+
+  console.log(window.screen.width);
+
   var settings = {
     arrow: true,
     dots: false,
@@ -42,7 +47,13 @@ export function SimpleSlider() {
     <Container>
       <Slider {...settings}>
         <div>
-          <img src={banner1} alt="banner 1" />
+          {
+            window.screen.width <= 400 ? <img src={bannerMob} alt="banner-mob" />
+              : window.screen.width > 400 && window.screen.width <= 768 ?
+                <img src={bannerTab} alt="banner-tab" />
+                : <img src={bannerDesk} alt="banner-desk" />
+          }
+
         </div>
         <div>
           <h3>2</h3>

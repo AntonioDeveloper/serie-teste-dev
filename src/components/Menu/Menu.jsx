@@ -1,4 +1,3 @@
-import imgMenu from '../../assets/burger.png';
 import { Container } from './styles';
 import { useState } from 'react';
 
@@ -6,22 +5,37 @@ export function Menu() {
 
   const [checked, setChecked] = useState(false);
 
+  const [visible, setVisible] = useState(false);
+
   const toggleMenuMob = () => {
     const winWidth = window.screen.width;
     const element = document.querySelector("nav ul");
 
-    if (winWidth < 920) {
+    if (winWidth < 920 && element) {
       if (checked === true) {
+        element.classList.remove("not-visible");
         element.classList.add("is-visible");
       } else {
         element.classList.remove("is-visible");
+        element.classList.add("not-visible");
+
       }
     }
   }
 
-  //toggleMenuMob()
+  const toggleMenuLink = () => {
+    const x = document.querySelector('.nav-link');
+    const y = document.querySelector(".dropdown");
+
+    setVisible(!visible);
+    visible === true ? y.classList.add('not-visible') : y.classList.remove('not-visible');
 
 
+  }
+
+  toggleMenuMob()
+
+  console.log(visible)
   return (
     <Container>
       <ul>
@@ -33,7 +47,7 @@ export function Menu() {
         </li>
         <li className="nav-link">
           <a href="#">Categoria <i class="fi fi-rr-caret-down"></i></a>
-          <div className="dropdown">
+          <div className="dropdown" >
             <li className="second-level">
               <a href="#">Link 1</a>
             </li>

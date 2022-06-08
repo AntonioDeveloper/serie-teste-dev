@@ -27,8 +27,8 @@ export const Container = styled.section`
 
     .overlay {
       display: none;
-      width: 250px;
-      height: 40%;
+      width: 290px;
+      height: 55%;
       background: rgba(129,88,197,.5);
       position: absolute;
       z-index: 1;

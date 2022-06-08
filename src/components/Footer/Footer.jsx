@@ -16,7 +16,6 @@ export function Footer() {
     setScrollPosition(window.scrollY);
 
     const heightLimit = window.screen.height * 0.8;
-    console.log(heightLimit);
 
     if (scrollPosition > heightLimit) {
       setVisible(true);

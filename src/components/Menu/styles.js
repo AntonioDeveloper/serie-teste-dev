@@ -3,15 +3,43 @@ import styled from 'styled-components';
 export const Container = styled.nav`
   position: fixed;
   background: #8158C5;
-  max-width: 1024px;
+  max-width: 1170px;
   width: 100%;
   height: 50px;
   z-index: 1;
   
   .is-visible {
+    /* left: 100%; */
     display: flex;
+    animation: moveToRight 1s ease-in-out;
+    animation-delay: 10ms;
+  }
+
+  @keyframes moveToRight {
+      0% {
+          transform: translateX(-100%);
+      }
+      100% {
+          transform: translateX(0%);
+      }
   }
   
+  .not-visible {
+    display: block;
+    left: -100%;
+    animation: moveToLeft 1s ease-in-out;
+    animation-delay: 10ms;
+  }
+
+  @keyframes moveToLeft {
+      0% {
+          transform: translateX(0%);
+      }
+      100% {
+          transform: translateX(-100%);
+      }
+  }
+
   @media screen and (max-width: 768px) {
     z-index: 1001;
     position: relative;
@@ -49,6 +77,7 @@ export const Container = styled.nav`
         width: 100%;
         line-height: 40px;
         padding-left: 10px;
+        text-align: left;
       }
 
       &:hover {
@@ -63,6 +92,19 @@ export const Container = styled.nav`
           @media screen and (max-width: 768px) {
             width: 100%;
             top: -6px;
+            left: initial;
+            transform: initial;
+            opacity: 1;
+            pointer-events: auto;
+            
+            &:before {
+              content: "x";
+              position: absolute;
+              display: block;
+              right: 10px;
+              top: -44px;
+              color: rebeccapurple;
+            }
           }
         }
       }
@@ -102,6 +144,7 @@ export const Container = styled.nav`
           a {
             color: #666;
             line-height: 35px;
+            background-color: transparent;
           }
         }
       }
@@ -114,6 +157,14 @@ export const Container = styled.nav`
         display: none;
         overflow-x: auto;
         width: 210px;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          left: initial;
+          transform: initial;
+          opacity: 1;
+          pointer-events: auto;
+        }
 
         .third-level {
           border-bottom: 1px solid #666;
@@ -155,6 +206,10 @@ export const Container = styled.nav`
     justify-content: center;
     left: 1rem;
     position: absolute;
+    
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      display: none;
+    }
     
     @media screen and (min-width: 1025px) {
       display:none;

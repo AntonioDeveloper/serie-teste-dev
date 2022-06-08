@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   :root {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1170px;
     height: 100%;
     margin: 0 auto;
   }
